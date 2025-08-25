@@ -22,7 +22,7 @@ def get_entropy_of_dataset(data: np.ndarray) -> float:
     # TODO: Implement entropy calculation
     # Hint: Use np.unique() to get unique classes and their counts
     # Hint: Handle the case when probability is 0 to avoid log2(0)
-    target = data[:,-1]
+    target = data[:,-1] #target till the last column
     _, counts = np.unique(target,return_counts=True)
     probabilities = counts/counts.sum()
     entropy = -np.sum(probabilities * np.log2(probabilities))
